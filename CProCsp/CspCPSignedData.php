@@ -47,29 +47,21 @@ const VERIFY_SIGNATURE_AND_CERTIFICATE = 1;
  * @see http://cpdn.cryptopro.ru/default.asp?url=content/cades/interface_c_ad_e_s_c_o_m_1_1_i_c_p_signed_data4.html
  * @see http://cpdn.cryptopro.ru/default.asp?url=content/cades/interface_c_ad_e_s_c_o_m_1_1_i_c_p_signed_data5.html
  *
- * @package CProCSP
  */
-class CPSignedData
+class CspCPSignedData extends CPSignedData
 {
-    private $cpSignedData;
 
-    /**
-     * CPSignedData constructor.
-     * @throws \ReflectionException
-     */
-    public function __construct ()
-    {
-        $this->cpSignedData = new  ReflectionClass('CPSignedData');
-    }
 
     public function SignCades() {}
 
     /**
      * Добавляет к сообщению усовершенствованную подпись.
+     * @return mixed
      */
-    public function SignHash() {
-        return $this->cpSignedData->SignHash();
+    public function cpSignHash() {
+        return $this->SignHash();
     }
+
 
 
     /**
@@ -88,8 +80,8 @@ class CPSignedData
      * @param boolean $bDetached If True, the data to be signed is detached;
      * @param int $encodingType A value of the ENCODING_TYPE
      */
-    public function Sign ($signer = null, $bDetached = false, $encodingType = ENCODE_BASE64) {
-        $this->cpSignedData->Sign($signer, $bDetached, $encodingType);
+    public function cpSign ($signer = null, $bDetached = false, $encodingType = ENCODE_BASE64) {
+       $this->Sign($signer, $bDetached, $encodingType);
     }
 
 
@@ -105,15 +97,21 @@ class CPSignedData
 
     }
 
+
+
     /**
      *
      */
     public function CoSignCades() {}
 
+
+
     /**
      *
      */
     public function EnhanceCades() {}
+
+
 
     /**
      * Determines the validity of a signature or signatures.
@@ -121,12 +119,19 @@ class CPSignedData
      * @param boolean $bDetached If True, the data to be signed is detached
      * @param int $verifyFlag A value of the CAPICOM_SIGNED_DATA_VERIFY_FLAG
      */
-    public function Verify($signedMessage, $bDetached = false, $verifyFlag) {}
+    public function cpVerify($signedMessage, $bDetached = false, $verifyFlag)
+    {
+        $this->Verify($signedMessage, $bDetached, $verifyFlag);
+    }
+
+
 
     /**
      *
      */
     public function VerifyCades() {}
+
+
 
     /**
      * Проверяет усовершенствованную подпись на основе переданного хэш-значения.
@@ -137,20 +142,24 @@ class CPSignedData
      * Если в переданном сообщении присутствует подписанный атрибут messageDigest, то данный метод проверяет только
      * соответствие хэш-значения в параметре Hash тому хэш-значению, которое содержится в атрибуте messageDigest.
      *
-     * @param CPHashedData $hash
+     * @param CspCPHashedData $hash
      * @param string $signedMessage Проверяемое подписанное сообщение.
      * @param int $cadesType Тип усовершенствованной подписи
      *
      * @throws \Exception Генерирует Ошибки в любом случае кроме успешной проверки
      */
     public function VerifyHash($hash, $signedMessage, $cadesType = CADES_DEFAULT) {
-        $this->cpSignedData->VerifyHash($hash, $signedMessage, $cadesType);
+       $this->cpsSignData->VerifyHash($hash, $signedMessage, $cadesType);
     }
+
+
 
     /**
      *
      */
     public function set_ContentEncoding() {}
+
+
 
     /**
      * Данные которые будем подписывать
@@ -160,21 +169,32 @@ class CPSignedData
      *
      * @param string $content данные
      */
-    public function set_Content ($content) {
-        $this->cpSignedData->set_Content($content);
+    public function cpSetContent ($content) {
+       $this->set_Content($content);
     }
+
+
 
     /**
      * Возвращает коллекцию подписантов подписи
      * Retrieves the Signers collection that represents the signature creators of the data.
      *
-     * @return \CProCSP\CPSigners
+     * @return \CProCSP\CspCPSigners
      */
-    public function get_Signers() {}
+    public function cpGetSigners()
+    {
+        return $this->get_Signers();
+    }
+
+
 
     /**
      * Retrieves the Certificates collection of the signed data.
+     * @return mixed
      */
-    public function get_Certificates() {}
+    public function cpGetCertificates()
+    {
+        return $this->get_Certificates();
+    }
 
 }

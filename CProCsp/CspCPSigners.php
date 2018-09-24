@@ -8,7 +8,7 @@ namespace CProCSP;
  * @see http://cpdn.cryptopro.ru/default.asp?url=content/cades/class_c_ad_e_s_c_o_m_1_1_c_p_signers.html
  * @package CProCSP
  */
-class CPSigners
+class CspCPSigners
 {
     /**
      * Возвращает количество подписантов

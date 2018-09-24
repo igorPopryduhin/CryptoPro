@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae7c2e44-e695-4ce3-a4f5-bfd386be01b8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CProCsp/CPSignedData.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CProCsp/CPSigners.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CProCsp/CspCPHashedData.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CProCsp/CspCPcertificate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CProCsp/CPSignedData.php" beforeDir="false" afterPath="$PROJECT_DIR$/CProCsp/CspCPSignedData.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CProCsp/CPSigners.php" beforeDir="false" afterPath="$PROJECT_DIR$/CProCsp/CspCPSigners.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,17 +21,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CPSignedData.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CProCsp/CPSignedData.php">
+      <file leaf-file-name="CspCPSignedData.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CProCsp/CspCPSignedData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="61" column="50" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="50" />
+            <state relative-caret-position="-19">
+              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
               <folding>
-                <element signature="e#1375#2187#0#PHP" expanded="true" />
-                <element signature="e#2290#2370#0#PHP" expanded="true" />
-                <element signature="e#2249#2318#0#PHP" expanded="true" />
-                <element signature="e#2418#2759#0#PHP" expanded="true" />
+                <element signature="e#2512#2853#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -37,11 +45,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-              <folding>
-                <element signature="e#7#29#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="19">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -64,10 +69,12 @@
       <list>
         <option value="$PROJECT_DIR$/Csp/CPSignedData.php" />
         <option value="$PROJECT_DIR$/Csp/ICsp/CPSignedData.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Csp/CSPSingerData.php" />
         <option value="$PROJECT_DIR$/Csp/ICsp/ICPSignedData.php" />
         <option value="$PROJECT_DIR$/CProCsp/CPSignedData.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/CProCsp/cspCPSignedData.php" />
+        <option value="$PROJECT_DIR$/CProCsp/CspCPSignedData.php" />
       </list>
     </option>
   </component>
@@ -147,15 +154,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537804242375</updated>
-      <workItem from="1537804243700" duration="6148000" />
+      <workItem from="1537804243700" duration="8803000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6148000" />
+    <option name="totallyTimeSpent" value="8803000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16897655" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -190,13 +198,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
@@ -210,16 +211,6 @@
           <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="34" />
           <folding>
             <element signature="e#187#244#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding>
-            <element signature="e#7#29#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -241,16 +232,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CProCsp/CspCPcertificate.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CProCsp/CspCPSigners.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/CProCsp/CPSignedData.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="61" column="50" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="50" />
+        <state relative-caret-position="-532">
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
           <folding>
+            <element signature="e#27#350#0#PHP" expanded="true" />
             <element signature="e#1375#2187#0#PHP" expanded="true" />
             <element signature="e#2290#2370#0#PHP" expanded="true" />
             <element signature="e#2249#2318#0#PHP" expanded="true" />
             <element signature="e#2418#2759#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CProCsp/CspCPSignedData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="e#2512#2853#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>
