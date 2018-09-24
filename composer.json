@@ -1,0 +1,13 @@
+{
+    "name": "igorp/crypto-pro",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Игорь",
+            "email": "igor.popryduhin@yandex.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
