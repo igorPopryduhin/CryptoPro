@@ -1,6 +1,6 @@
 <?php
 
-namespace CProCSP;
+namespace Csp;
 
 /**
  * Глобальные константы для установки типов алгоритма хеша, например для CPHashedData::set_Algorithm

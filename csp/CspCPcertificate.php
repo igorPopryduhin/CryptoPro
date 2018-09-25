@@ -1,6 +1,6 @@
 <?php
 
-namespace CProCSP;
+namespace Csp;
 
 /**
  * Глобальные константы плагина используемые методом CPcertificate::GetInfo

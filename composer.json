@@ -1,13 +1,20 @@
 {
-    "name": "igorp/crypto-pro",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Игорь",
-            "email": "igor.popryduhin@yandex.ru"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {}
+  "name": "igorp/crypto-pro",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Игорь",
+      "email": "igor.popryduhin@yandex.ru"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Csp\\": "csp"
+    }
+  },
+  "files": [
+    "defines.php"
+  ]
 }

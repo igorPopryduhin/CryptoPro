@@ -1,6 +1,6 @@
 <?php
 
-namespace CProCSP;
+namespace Csp;
 
 /**
  * Только описание! Для автокомплитов IDE и справки
@@ -23,7 +23,7 @@ class CspCPSigners
      * Retrieves the Signer object that represents the indexed signer. This is the default property.
      *
      * @param integer $index индекс, начиная с 1
-     * @return \CProCSP\CPSigner
+     * @return \csp\CPSigner
      */
     public function get_Item ($index) {}
 

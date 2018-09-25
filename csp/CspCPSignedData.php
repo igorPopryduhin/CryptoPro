@@ -1,10 +1,7 @@
 <?php
-/*
- *
- * Я внес изменения
- */
 
-namespace CProCsp;
+
+namespace Csp;
 
 /**
  * Глобальные константы тип усовершенствованной подписи, например для CPSignedData::VerifyHash
@@ -14,7 +11,7 @@ namespace CProCsp;
  * @var int CADES_X_LONG_TYPE_1 Тип подписи CAdES-X Long Type 1
  */
 
-use ReflectionClass;
+
 const CADES_BES = 0x01;
 const CADES_DEFAULT = 0x00;
 const CADES_T = 0x05;
@@ -183,7 +180,7 @@ class CspCPSignedData extends CPSignedData
      * Возвращает коллекцию подписантов подписи
      * Retrieves the Signers collection that represents the signature creators of the data.
      *
-     * @return \CProCSP\CspCPSigners
+     * @return \csp\CspCPSigners
      */
     public function cpGetSigners()
     {
