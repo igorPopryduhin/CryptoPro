@@ -6,12 +6,12 @@
  * Time: 3:45
  */
 
-namespace csp;
+namespace Csp;
 
 
 /**
  * Class CPCertificate
- * @package csp
+ * @package Csp
  */
 class CPCertificate
 {
@@ -25,16 +25,18 @@ class CPCertificate
     }
 
     /**
+     * Извлекает сведения из сертификата.
      * @param $InfoType
      * @see https://docs.microsoft.com/ru-ru/windows/desktop/SecCrypto/capicom-cert-info-type
+     *
      * CERT_INFO_SUBJECT_SIMPLE_NAME    Returns the display name of the certificate subject.
-     * CERT_INFO_ISSUER_SIMPLE_NAME    Returns the display name of the issuer of the certificate.
-     * CERT_INFO_SUBJECT_EMAIL_NAME    Returns the email address of the certificate subject.
-     * CERT_INFO_ISSUER_EMAIL_NAME    Returns the email address of the issuer of the certificate.
-     * CERT_INFO_SUBJECT_UPN    Returns the UPN of the certificate subject. Introduced in CAPICOM 2.0.
-     * CERT_INFO_ISSUER_UPN    Returns the UPN of the issuer of the certificate. Introduced in CAPICOM 2.0.
-     * CERT_INFO_SUBJECT_DNS_NAME    Returns the DNS name of the certificate subject. Introduced in CAPICOM 2.0.
-     * CERT_INFO_ISSUER_DNS_NAME    Returns the DNS name of the issuer of the certificate. Introduced in CAPICOM 2.0.
+     * CERT_INFO_ISSUER_SIMPLE_NAME     Returns the display name of the issuer of the certificate.
+     * CERT_INFO_SUBJECT_EMAIL_NAME     Returns the email address of the certificate subject.
+     * CERT_INFO_ISSUER_EMAIL_NAME      Returns the email address of the issuer of the certificate.
+     * CERT_INFO_SUBJECT_UPN            Returns the UPN of the certificate subject. Introduced in CAPICOM 2.0.
+     * CERT_INFO_ISSUER_UPN             Returns the UPN of the issuer of the certificate. Introduced in CAPICOM 2.0.
+     * CERT_INFO_SUBJECT_DNS_NAME       Returns the DNS name of the certificate subject. Introduced in CAPICOM 2.0.
+     * CERT_INFO_ISSUER_DNS_NAME        Returns the DNS name of the issuer of the certificate. Introduced in CAPICOM 2.0.
      * @return mixed Info
      */
     public function GetInfo($InfoType)
@@ -78,9 +80,16 @@ class CPCertificate
     }
 
 
+
+    /**
+     * Получает строку, содержащую серийный номер сертификата.
+     * @return string
+     */
     public function get_SerialNumber()
     {
+        return $this->CPCertificate->get_SerialNumber();
     }
+
 
 
     public function get_Thumbprint()
@@ -88,13 +97,20 @@ class CPCertificate
     }
 
 
+
     public function get_SubjectName()
     {
+        return $this->CPCertificate->get_SubjectName();
     }
 
 
+    /**
+     * Возвращает строку, содержащую имя издателя сертификата.
+     * @return string
+     */
     public function get_IssuerName()
     {
+        return $this->CPCertificate->get_IssuerName();
     }
 
 
@@ -103,13 +119,23 @@ class CPCertificate
     }
 
 
+    /**
+     * Получает строку, содержащую имя субъекта сертификата.
+     * @return string
+     */
     public function get_ValidToDate()
     {
+        return $this->CPCertificate->get_ValidToDate();
     }
 
 
+    /**
+     * Получает дату начала действия сертификата.
+     * @return string
+     */
     public function get_ValidFromDate()
     {
+        return $this->CPCertificate->get_ValidFromDate();
     }
 
 

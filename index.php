@@ -1,14 +1,14 @@
 <?php
 
-use csp\CPCertificate;
-use csp\CPCertificates;
+use Csp\CPCertificate;
+use Csp\CPCertificates;
+use Csp\CPSignedData;
+use Csp\CPSigner;
 use Csp\CPStore;
 
 ini_set('error_reporting', E_ALL);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
-
-
 
 include "vendor/autoload.php";
 
@@ -23,21 +23,33 @@ $certs = $certificates->Find(CERTIFICATE_FIND_SUBJECT_NAME, 'ADMINISTRATOR', 0);
 
 /** @var CPCertificate $cert */
 $cert =  $certs->Item(1);
-$certInfo = $cert->GetInfo(CERT_INFO_ISSUER_SIMPLE_NAME );
 
-print_r($certInfo);
+/** @var CPSigner $signer */
+$class = "CPSigner";
+$signer = new $class();
+$signer->set_TSAAddress('http://testca.cryptopro.ru/tsp/tsp.srf');
+$signer->set_Certificate($cert);
+
+/** @var CPSignedData $sd */
+$sd = new CPSignedData();
+$sd->set_Content('my content');
+
+
+$sm = $sd->Sign($signer, 0, STRING_TO_UCS2LE);
+
+$sd->Verify($sm, 0, VERIFY_SIGNATURE_ONLY);
+echo "Verify ok <br>";
 
 
 
+$methods = get_class_methods('CPStore');
 
-//$methods = get_class_methods('CPCertificate');
-//
-//foreach ( $methods as $item){
-//    echo "public function $item()<br>";
-//    echo "{<br>";
-//    echo "}<br>";
-//    echo "<br><br>";
-//}
+foreach ( $methods as $item){
+    echo "public function $item()<br>";
+    echo "{<br>";
+    echo "}<br>";
+    echo "<br><br>";
+}
 
 
 

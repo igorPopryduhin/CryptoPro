@@ -13,14 +13,18 @@ class Version
 
     private $version;
 
+
+
     /**
      * IVersion constructor.
      */
     public function __construct ()
     {
         $class = 'Version';
-        $this->version = new $class();
+        new $class();
     }
+
+
 
     /**
      * @return mixed
@@ -30,6 +34,8 @@ class Version
         return $this->version->get_MajorVersion();
     }
 
+
+
     /**
      * @return mixed
      */
@@ -38,6 +44,8 @@ class Version
         return $this->version->get_MinorVersion();
     }
 
+
+
     /**
      * @return mixed
      */
@@ -45,6 +53,8 @@ class Version
     {
         return $this->version->get_BuildVersion();
     }
+
+
 
     /**
      * @return mixed

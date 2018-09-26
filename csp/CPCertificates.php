@@ -6,7 +6,7 @@
  * Time: 3:38
  */
 
-namespace csp;
+namespace Csp;
 
 
 class CPCertificates

@@ -10,7 +10,30 @@ const STORE_OPEN_INCLUDE_ARCHIVED = 256;
 const CERTIFICATE_FIND_SUBJECT_NAME = 1;
 
 
-/*  CAPICOM_CERT_INFO_TYPE enumeration */
+/**
+ * Проверяется только подпись.
+ */
+const VERIFY_SIGNATURE_ONLY = 0;
+/**
+ * Проверяется как подпись, так и действительность сертификата, используемого для создания подписи.
+ */
+const VERIFY_SIGNATURE_AND_CERTIFICATE = 1;
+
+
+
+/* CONTENT_ENCODING_TYPE enumeration */
+
+/**
+ * Кодировка UTF-8 или UNICODE.
+ */
+const STRING_TO_UCS2LE = 0x00;
+/**
+ * Data is saved as a base64-encoded string.
+ */
+const BASE64_TO_BINARY = 0x01;
+
+
+/*  CERT_INFO_TYPE enumeration */
 
 /**
  * Returns the display name of the certificate subject.
