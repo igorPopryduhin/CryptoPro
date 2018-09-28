@@ -57,6 +57,8 @@ class CPSignedData
     }
 
 
+    
+
     public function CoSignHash()
     {
     }
@@ -86,7 +88,7 @@ class CPSignedData
      */
     public function Verify($SignedMessage, $bDetached , $VerifyFlag)
     {
-        $this->CPSignedData->Verify($SignedMessage, $bDetached , $VerifyFlag);
+        return $this->CPSignedData->Verify($SignedMessage, $bDetached , $VerifyFlag);
     }
 
 
