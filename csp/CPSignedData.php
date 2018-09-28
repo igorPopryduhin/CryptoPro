@@ -57,7 +57,7 @@ class CPSignedData
     }
 
 
-    
+
 
     public function CoSignHash()
     {
@@ -92,8 +92,9 @@ class CPSignedData
     }
 
 
-    public function set_ContentEncoding()
+    public function set_ContentEncoding($contentEncoding)
     {
+        $this->CPSignedData->set_ContentEncoding($contentEncoding);
     }
 
 
