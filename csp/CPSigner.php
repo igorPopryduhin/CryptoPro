@@ -80,21 +80,28 @@ class CPSigner
 
     public function get_CRLs()
     {
+        return $this->CPSigner->get_CRLs();
     }
 
 
+    /**
+     * @return array
+     */
     public function get_OCSPResponses()
     {
+        return (array)$this->CPSigner->get_OCSPResponses();
     }
 
 
     public function get_SigningTime()
     {
+        return $this->CPSigner->get_SigningTime();
     }
 
 
     public function get_SignatureTimeStampTime()
     {
+        return $this->CPSigner->get_SignatureTimeStampTime();
     }
 
 

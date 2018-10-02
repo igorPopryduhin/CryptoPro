@@ -94,6 +94,7 @@ class CPCertificate
 
     public function get_Thumbprint()
     {
+        return $this->CPCertificate->get_Thumbprint();
     }
 
 
@@ -114,8 +115,12 @@ class CPCertificate
     }
 
 
+    /**
+     * @return string
+     */
     public function get_Version()
     {
+        return $this->CPCertificate->get_Version();
     }
 
 

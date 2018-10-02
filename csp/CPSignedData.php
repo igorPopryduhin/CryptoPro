@@ -41,14 +41,15 @@ class CPSignedData
      * @param int $encoding_type
      * @return string
      */
-    public function Sign($singer, $detached, $encoding_type)
+    public function Sign($singer, $detached, $encoding_type = STRING_TO_UCS2LE )
     {
-        return $this->CPSignedData->Sign($singer, $detached, $encoding_type);
+        return $this->CPSignedData->Sign($singer, $detached, $encoding_type );
     }
 
 
-    public function CoSign()
+    public function CoSign($singer, $detached = 0)
     {
+        return $this->CPSignedData->CoSign($singer, $detached);
     }
 
 
@@ -80,15 +81,14 @@ class CPSignedData
 
 
     /**
-     * Определяет действительность подписи или подписей.
      * @param $SignedMessage
      * @param $bDetached
      * @param $VerifyFlag
-     * @return void
+     * @return mixed
      */
-    public function Verify($SignedMessage, $bDetached , $VerifyFlag)
+    public function Verify($SignedMessage, $bDetached = 0, $VerifyFlag)
     {
-        return $this->CPSignedData->Verify($SignedMessage, $bDetached , $VerifyFlag);
+        $this->CPSignedData->Verify($SignedMessage, $bDetached , $VerifyFlag);
     }
 
 
@@ -100,6 +100,7 @@ class CPSignedData
 
     public function get_ContentEncoding()
     {
+        return $this->CPSignedData->get_ContentEncoding();
     }
 
 
@@ -117,7 +118,7 @@ class CPSignedData
      */
     public function get_Content()
     {
-
+        return $this->CPSignedData->get_Content();
     }
 
 
@@ -130,8 +131,12 @@ class CPSignedData
     }
 
 
+    /**
+     * @return object CPSignedData
+     */
     public function get_Certificates()
     {
+        return $this->CPSignedData->get_Certificates();
     }
 
 

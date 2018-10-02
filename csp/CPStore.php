@@ -70,4 +70,8 @@ class CPStore
     {
         return $this->CPStore->get_Name();
     }
+
+
+    public function test()
+    {}
 }
