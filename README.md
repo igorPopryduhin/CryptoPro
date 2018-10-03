@@ -7,7 +7,7 @@
 
 Инструкция для сборки расширения:
 http://cpdn.cryptopro.ru/content/cades/phpcades-install.html  или скачать уже скоипилированный файл.
-https://github.com/igorPopryduhin/libphpcades\
+https://github.com/igorPopryduhin/libphpcades
 
 ####Предложение
 Кому интересно данное расширение, предлагаю совместную разработку обертки.
