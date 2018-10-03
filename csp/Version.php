@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: igorp
- * Date: 25.09.2018
- * Time: 2:33
- */
+
 
 namespace Csp;
 
